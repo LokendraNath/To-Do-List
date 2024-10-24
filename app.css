@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital@0;1&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+}
+body {
+  background-color: rgb(245, 215, 212);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.container {
+  background-color: white;
+  padding: 15px;
+  border-radius: 20px;
+  width: 300px;
+  text-align: center;
+  height: 500px;
+  position: fixed;
+  box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.25),
+    inset 2px 2px 5px rgba(0, 0, 0, 0.5), inset -3px -3px 5px rgba(0, 0, 0, 0.5);
+}
+.heading {
+  margin-bottom: 20px;
+}
+#task-input {
+  width: 75%;
+  position: absolute;
+  left: 15px;
+  bottom: 10px;
+  font-weight: 600;
+  padding: 8px 15px;
+  border: 1px solid rgb(255,89,69);
+  border-radius: 8px;
+}
+input:focus {
+  outline: none; /* Yellow outline ko remove karne ke liye */
+  box-shadow: 0 0 5px black; /* Blue shadow effect */
+}
+#task-input::placeholder {
+  font-weight: 200;
+}
+.add-btn {
+  background-color: rgb(255,89,69);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  height: 38px;
+  width: 38px;
+  position: absolute;
+  right: 15px;
+  bottom: 10px;
+  box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.25),
+    inset 2px 2px 5px rgba(0, 0, 0, 0.5), inset -3px -3px 5px rgba(0, 0, 0, 0.5);
+}
+.add-btn i {
+  font-size: 20px;
+}
+ul li {
+  list-style: none;
+  position: relative;
+  font-size: 14px;
+  padding: 6px 8px 6px 50px;
+  user-select: none;
+  cursor: pointer;
+  width: 100%;
+  font-weight: 700;
+  margin: 5px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px;
+  border-top: 1px solid rgb(255,89,69);
+  border-bottom: 1px solid rgb(255,89,69);
+  display: flex;
+  align-items: center;
+}
+ul li::before{
+  content: '';
+  position: absolute;
+  height: 22px;
+  width: 22px;
+  border-radius: 50%;
+  background-image: url(img/unchecked.png);
+  background-size: cover;
+  background-position: center;
+  top: 7px;
+  left: 12px;
+}
+ul li.checked{
+  color: #555;
+  text-decoration: line-through;
+}
+ul li.checked::before{
+  background-image: url(img/checked.png);
+}
+.dlt-btn {
+  border: none;
+  height: 25px;
+  width: 25px;
+  border-radius: 8px;
+  background-color: white;
+  padding-top: 4px;
+  transition: all .2s ease-in-out;
+}
+.dlt-btn:hover{
+  background-color: rgb(255, 180, 180);
+}
+.dlt-btn i{
+  font-size: 16px;
+}
+.btn-span {
+  width: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
